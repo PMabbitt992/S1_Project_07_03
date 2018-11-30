@@ -24,6 +24,8 @@
 	General Styles for All Devices
    ===============================
 */
+
+/* The bottom nav is a flexbox with no wrap, centered, with a basis of 150px */
 nav#bottom ul {
     -webkit-display: flex;
     display: flex;
@@ -41,12 +43,100 @@ nav#bottom ul {
 	Mobile Styles up to 480 pixels
    ===============================
 */
+/* Only for screens under 480 pixels */
 @media only screen and (max-width:480px) {
 
+    /* Body color is gray with white text */
     body {
         color: rgb(211, 211, 211);
         background-color: rgb(51, 51, 51);
     }
+
+    /* the aisde, images in the article, and spotlight section are not viewable on moblie */
+    aside,
+    article>img,
+    section#spotlight {
+        display: none;
+    }
+
+    /* The top ul is a flexbox with wrap */
+    nav#top ul {
+        -webkit-display: flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    /* The top nav list items ar flexboxes with a font size of 2.2em and a basis size of 130px */
+    nav#top ul li {
+        font-size: 2.2em;
+        -webkit-flex: 1 1 130px;
+        flex: 1 1 130px;
+    }
+
+    /* Each image in the nav top is the background for the words, covered and centered with no repeat  */
+    nav#top ul li:nth-of-type(1) {
+        background-image: url('cw_image01.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    nav#top ul li:nth-of-type(2) {
+        background-image: url('cw_image02.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    nav#top ul li:nth-of-type(3) {
+        background-image: url('cw_image03.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    nav#top ul li:nth-of-type(4) {
+        background-image: url('cw_image04.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    nav#top ul li:nth-of-type(5) {
+        background-image: url('cw_image05.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    nav#top ul li:nth-of-type(6) {
+        background-image: url('cw_image06.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* Paragraph links are flexboxes with nowrap and space around them  */
+    p#links {
+        -webkit-display: flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+
+    }
+
+    /* The hypertext links are red with white text, no underline, and space around them with round borders */
+    p#links a {
+        color: rgb(255, 255, 255);
+        background-color: rgb(220, 27, 27);
+        border-radius: 20px;
+        padding: 10px;
+        text-decoration: none;
+    }
+
 }
 
 
@@ -56,3 +146,42 @@ nav#bottom ul {
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+/* only for bigger than 481 */
+@media only screen and (min-width:481px) {
+
+    /* body is a flex box */
+    body {
+        -webkit-display: flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    /* also a flexbox with specified rates */
+    article {
+        -webkit-flex: 2 1 400px;
+        flex: 2 1 400px;
+    }
+
+    /* also a flexbox with specified rates */
+    aside {
+        -webkit-flex: 1 2 200px;
+        flex: 1 2 200px;
+    }
+
+    /* Top nav is a flexbox with centered content and specified rates */
+    nav#top ul {
+        -webkit-display: flex;
+        display: flex;
+        background-color: rgb(51, 51, 51);
+        height: 50px;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex: 1 1 80px;
+        flex: 1 1 80px;
+    }
+
+
+}
