@@ -179,9 +179,15 @@ nav#bottom ul {
         justify-content: center;
         -webkit-align-items: center;
         align-items: center;
-        -webkit-flex: 1 1 80px;
-        flex: 1 1 80px;
     }
 
+    nav#top ul li {
+        -webkit-flex: 0 1 80px;
+        flex: 0 1 80px;
+    }
+
+    p#links {
+        display: none;
+    }
 
 }
